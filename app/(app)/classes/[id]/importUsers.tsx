@@ -42,7 +42,7 @@ export default function ImportUsers({ classId }: { classId: string }) {
           >
             <fieldset className="fieldset">
               <legend className="fieldset-legend">Plik importu</legend>
-              <input name="file" type="file" className="file-input w-full" />
+              <input name="file" type="file" accept=".csv" className="file-input w-full" />
               <p
                 className={`label ${
                   state?.status == "error" &&
