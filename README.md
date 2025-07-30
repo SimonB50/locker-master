@@ -11,8 +11,16 @@ W celu uruchomienia aplikacji, należy zainstalować [Node.js](https://nodejs.or
    - Zaleca się zmianę domyślnego hasła do logowania do aplikacji.
    - Można to zrobić poprzez zmianę wartości `PASSWORD`.
 4. Zainstaluj zależności: `npm install`
-5. Uruchom aplikację: `npm start`
-6. Otwórz przeglądarkę i przejdź do `http://localhost:3000`
+5. Zbuduj aplikację: `npm run build`
+6. Uruchom aplikację: `npm run start`
+7. Otwórz przeglądarkę i przejdź do `http://localhost:3000`
+
+## Aktualizacja
+Aby zaktualizować aplikację do najnowszej wersji, wykonaj następujące kroki:
+1. Pobierz najnowsze zmiany z repozytorium: `git pull`
+2. Zainstaluj nowe zależności: `npm install`
+3. Zbuduj aplikację ponownie: `npm run build`
+4. Uruchom aplikację ponownie: `npm run start`
 
 ## Domyślne hasło
 Domyślne hasło do logowania aplikacji to `N@szaSzkola`.<br>
