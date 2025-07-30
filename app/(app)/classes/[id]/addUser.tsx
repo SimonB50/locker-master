@@ -62,7 +62,7 @@ export default function AddUser({ classId }: { classId: string }) {
                 {state?.status == "error" &&
                 state.errors!.find((e) => e.path.includes("name"))
                   ? state.errors!.find((e) => e.path.includes("name"))!.message
-                  : "Imię i nazwisko ucznia, np. Jan Kowalski, Anna Nowak"}
+                  : "Imię i nazwisko ucznia, np. Jan Kowalski lub Jan Nowak-Nowicki"}
               </p>
             </fieldset>
             <fieldset className="fieldset">

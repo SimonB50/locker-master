@@ -13,8 +13,8 @@ const createClassSchema = z.object({
     .string("Podaj imię i nazwisko wychowawcy")
     .min(1, "Imię i nazwisko nauczyciela jest wymagane")
     .regex(
-      /^[A-Za-z]+ [A-Za-z]+$/,
-      "Imię i nazwisko nauczyciela musi być w formacie np. Jan Kowalski"
+      /^[A-Za-z]+(?:-[A-Za-z]+)? [A-Za-z]+(?:-[A-Za-z]+)?$/,
+      "Imię i nazwisko nauczyciela musi być w formacie np. Jan Kowalski lub Jan Nowak-Nowicki"
     ),
   unitId: z.uuid("Podaj ID jednostki"),
 });

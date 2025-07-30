@@ -87,7 +87,7 @@ export default function AddClass({
                 state.errors!.find((e) => e.path.includes("teacher"))
                   ? state.errors!.find((e) => e.path.includes("teacher"))!
                       .message
-                  : "Imię i nazwisko wychowawcy klasy, np. Jan Kowalski, Anna Nowak"}
+                  : "Imię i nazwisko wychowawcy klasy, np. Jan Kowalski lub Jan Nowak-Nowicki"}
               </p>
             </fieldset>
             <fieldset className="fieldset">

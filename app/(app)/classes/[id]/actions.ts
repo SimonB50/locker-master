@@ -9,8 +9,8 @@ const createUserSchema = z.object({
   name: z
     .string("Podaj imię i nazwisko ucznia")
     .regex(
-      /^[A-Za-z]+ [A-Za-z]+$/,
-      "Imię i nazwisko ucznia musi być w formacie np. Jan Kowalski"
+      /^[A-Za-z]+(?:-[A-Za-z]+)? [A-Za-z]+(?:-[A-Za-z]+)?$/,
+      "Imię i nazwisko ucznia musi być w formacie np. Jan Kowalski lub Jan Nowak-Nowicki"
     ),
   lockerCode: z.string().optional(),
   classId: z.string("Podaj odpowiednią klasę"),
@@ -84,8 +84,8 @@ const editUserSchema = z.object({
   name: z
     .string("Podaj imię i nazwisko ucznia")
     .regex(
-      /^[A-Za-z]+ [A-Za-z]+$/,
-      "Imię i nazwisko ucznia musi być w formacie np. Jan Kowalski"
+      /^[A-Za-z]+(?:-[A-Za-z]+)? [A-Za-z]+(?:-[A-Za-z]+)?$/,
+      "Imię i nazwisko ucznia musi być w formacie np. Jan Kowalski lub Jan Nowak-Nowicki"
     ),
   lockerCode: z.string().optional(),
 });
@@ -276,8 +276,8 @@ const editClassSchema = z.object({
     .string("Podaj imię i nazwisko wychowawcy")
     .min(1, "Imię i nazwisko nauczyciela jest wymagane")
     .regex(
-      /^[A-Za-z]+ [A-Za-z]+$/,
-      "Imię i nazwisko nauczyciela musi być w formacie np. Jan Kowalski"
+      /^[A-Za-z]+(?:-[A-Za-z]+)? [A-Za-z]+(?:-[A-Za-z]+)?$/,
+      "Imię i nazwisko nauczyciela musi być w formacie np. Jan Kowalski lub Jan Nowak-Nowicki"
     ),
   classId: z.string("Podaj ID klasy"),
 });
