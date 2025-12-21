@@ -1,6 +1,6 @@
 import { NextResponse, NextRequest } from "next/server";
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const currentPassword = request.cookies.get("pswd")?.value;
   const decodedPassword = currentPassword
     ? Buffer.from(currentPassword, "base64").toString("utf-8")
